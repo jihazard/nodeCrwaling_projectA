@@ -25,12 +25,14 @@ const iconv = require('iconv-lite');
                     const title = $(el).find("a").find("h2").text().replace(/\s\s+/g, '');
                     const description = $(el).find("a").find("p").text().replace(/\s\s+/g, '');
                     const url = URL + $(el).find("a").attr("href")
+
                     info.writer = writer;
                     info.writeDtm = writeDtm;
                     info.avatar = avatar;
                     info.title = title;
                     info.description = description;
                     info.url = url;
+                    
                     resultArr.push(info)
     
                     

@@ -30,7 +30,7 @@ const iconv = require('iconv-lite');
                     const description  = $(el).find(".entry-summary p").text();
                     const url  = $(el).find(".plain").attr("href");
 
-                    info.index = index;
+                    
                     info.writer = writer;
                     info.writeDtm = writeDtm;
                     info.avatar = avatar;
