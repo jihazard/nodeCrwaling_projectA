@@ -48,13 +48,9 @@ router.get("/woo1", function(req, res, next){
 
                 
           })
-          console.log("result ===> " + resultArr.length)
+          
           resolve(resultArr)
-          if(resultArr > 0) {
-              console.log("========")
-              resolve(resultArr)
-          }
-
+          
          
         })
     })
