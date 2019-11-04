@@ -12,10 +12,14 @@ router.get("/api/v1/lists", async function(req, res, next){
   var wooModule = await woo; 
   var totalResult = lineModlue.concat(wooModule);
 
-  return res.json(totalResult.sort(function(a,b){
-    a = new Date(a.writeDtm);
-    b = new Date(b.writeDtm);
-  return a>b ?-1:a<b ?1:0;}))
+  if(totalResult){
+    return res.json({success:true, data:totalResult.sort(function(a,b){
+      a = new Date(a.writeDtm);
+      b = new Date(b.writeDtm);
+    return a>b ?-1:a<b ?1:0;})})  
+  }
+
+  return res.json({success:false,message:"error"})
   })
 
 module.exports=router
